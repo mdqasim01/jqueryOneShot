@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<style>
+		*
+		{
+			margin:0 auto;
+			padding:0;
+		}
+		div
+		{
+			width:200px;
+			height:50px;
+			background-color:orange;
+			text-align: center;
+			margin:5px;
+			line-height: 50px;
+			cursor: pointer;
+			font-size: 15px;
+		}
+
+		.first
+		{
+			background-color:red;
+		}
+		
+	</style>
+</head>
+<body>
+
+<div>Home</div>
+<div>Home</div>
+<div>Home</div>
+<div>Home</div>
+<div>Home</div>
+
+<input type="password" maxlength="6" id="one">
+<input type="checkbox">
+<input type="button" value="show">
+
+<button type="button">fadeTo</button>
+
+
+
+<script>
+
+$(document).ready(function(){
+	$('button').click(function(){
+		$("div").fadeTo(2000,0.2);
+	});
+
+	$("div").click(function(){
+		// $(this).addClass('first');
+		$(this).toggleClass('first');
+	});
+
+var a=1;
+	$("input[value='show']").click(function(){
+		if(a==1)
+		{
+			$('#one').attr('type','text');
+			a++;
+		}
+		else
+		{
+			$('#one').attr('type','password');
+			a=1;
+		}
+	});
+
+
+
+})
+
+
+</script>
+
+
+	
+</body>
+</html>

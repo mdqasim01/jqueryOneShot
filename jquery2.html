@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      * {
+        margin: 0 auto;
+        padding: 0;
+      }
+      .main {
+        width: 500px;
+        height: auto;
+        border: 1px solid gray;
+        padding: 10px;
+      }
+      .main p {
+        display: none;
+		font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+	<h1>Here's Your Text</h1>
+    <div class="main">
+      The Google Hosted Libraries is a stable, reliable, high-speed, globally
+      available content distribution network for the most popular, open-source
+      JavaScript libraries. Google works directly with the key stakeholders for
+      each library effort and accepts the latest versions as they are
+      released.The Google Hosted Libraries is
+      <p >
+        a stable, reliable, high-speed, globally available content distribution
+        network for the most popular, open-source JavaScript libraries. Google
+        works directly with the key stakeholders for each library effort and
+        accepts the latest versions as they are released.a stable, reliable,
+        high-speed, globally available content distribution network for the most
+        popular, open-source JavaScript libraries. Google works directly with
+        the key stakeholders for each library effort and accepts the latest
+        versions as they are released.a stable, reliable, high-speed, globally
+        available content distribution network for the most popular, open-source
+        JavaScript libraries. Google works directly with the key stakeholders
+        for each library effort and accepts the latest versions as they are
+        released.a stable, reliable, high-speed, globally available content
+        distribution network for the most popular, open-source JavaScript
+        libraries. Google works directly with the key stakeholders for each
+        library effort and accepts the latest versions as they are released.a
+        stable, reliable, high-speed, globally available content distribution
+        network for the most popular, open-source JavaScript libraries. Google
+        works directly with the key stakeholders for each library effort and
+        accepts the latest versions as they are released.
+      </p>
+      <h2>more</h2>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("h2").click(function () {
+          $(".main>p").slideToggle(600, function () {
+            var a = $("h2").text();
+            if (a == "more") {
+              $("h2").text("less");
+            } else {
+              $("h2").text("more");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
